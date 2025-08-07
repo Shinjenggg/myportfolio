@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="portfolio">
+    <img src="images/image 1.png" class="portfolio-image" />
+    <img src="images/image 2.png" class="portfolio-image" />
+    <img src="images/image 3.png" class="portfolio-image" />
+    <img src="images/image 4.png" class="portfolio-image" />
+    <img src="images/image 5.png" class="portfolio-image" />
+    <img src="images/image 6.png" class="portfolio-image" />
+    <img src="images/image 7.png" class="portfolio-image" />
+    <img src="images/image 8.png" class="portfolio-image" />
+    <img src="images/image 9.png" class="portfolio-image" />
+    <img src="images/image 10.png" class="portfolio-image" />
+    <img src="images/image 11.png" class="portfolio-image" />
+    <img src="images/image 12.png" class="portfolio-image" />
+  </main>
+
+  <!-- ✅ Scroll Animation Script -->
+  <script>
+    const images = document.querySelectorAll('.portfolio-image');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    images.forEach(img => {
+      observer.observe(img);
+    });
+  </script>
+</body>
+</html>
