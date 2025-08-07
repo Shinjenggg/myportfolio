@@ -1,54 +1,53 @@
 /* Reset and base styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    position: relative; /* Needed for the overlay positioning */
-    background-image: url('images/image 13.jpg'); /* path to your graffiti image */
-    background-size: cover;        /* make it cover the whole screen */
-    background-repeat: no-repeat;  /* prevent it from repeating */
-    background-position: center;   /* center the image */
-    background-attachment: fixed;  /* optional: makes it stay fixed while scrolling */
-    font-family: sans-serif;
-    color: white; /* Optional: better contrast for text */
-  }
-  
-  /* Dark overlay to make background darker */
-  body::before {
-    content: "";
-    position: fixed; /* fixed to cover entire viewport */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Adjust opacity here for darkness */
-    z-index: -1; /* Behind the content */
-  }
-  
-  .portfolio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .portfolio-image {
-    width: 100%;
-    max-width: 1400px; /* 📏 Reduced from 1920px */
-    height: auto;
-    display: block;
-    border: 4px solid #333;
-  
-    /* Scroll animation styles */
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
-  }
-  
-  .portfolio-image.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative; /* Needed for the overlay positioning */
+  background-image: url('images/image 13.jpg'); /* path to your graffiti image */
+  background-size: cover;        /* make it cover the whole screen */
+  background-repeat: no-repeat;  /* prevent it from repeating */
+  background-position: center;   /* center the image */
+  background-attachment: fixed;  /* optional: makes it stay fixed while scrolling */
+  font-family: sans-serif;
+  color: white; /* Optional: better contrast for text */
+}
+
+/* Dark overlay to make background darker */
+body::before {
+  content: "";
+  position: fixed; /* fixed to cover entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust opacity here for darkness */
+  z-index: -1; /* Behind the content */
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-image {
+  width: 100%;
+  max-width: 1400px; /* 📏 Reduced from 1920px */
+  height: auto;
+  display: block;
+  border: 4px solid #333;
+
+  /* Scroll animation styles */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.portfolio-image.show {
+  opacity: 1;
+  transform: translateY(0);
+}
